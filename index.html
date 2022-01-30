@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Fast coding</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css">
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="slide" data-background="#3cb371" data-background-transition="zoom">
+					<h1>Hello everyone</h1>
+					<h3>Welcome to lecture about fast coding</h3>
+				</section>
+				<section>
+					<section >
+						<h2>Chapter 1 - EMMET</h2>
+					</section>
+					<section>How do you write your hypertext in html?</section>
+					<section>‘!’</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers><script type="text/template">
+							<!DOCTYPE html>
+							<html lang="en">
+							<head>
+								<meta charset="UTF-8">
+								<meta http-equiv="X-UA-Compatible" content="IE=edge">
+								<meta 
+									name="viewport" 
+									content="width=device-width, initial-scale=1.0">
+								<title>Document</title>
+							</head>
+							<body>
+								
+							</body>
+							</html>
+						</script></code></pre>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							tagName.className#id[attribute=content]{Your content}
+						</code></pre>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							<tagName class=className id=id attribute=content>
+								Your content
+							</tagName>
+						</code></pre>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							ul.items>.item-$*5
+						</code></pre>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							<ul class=items>
+								<li class=item-1></li>
+								<li class=item-2></li>
+								<li class=item-3></li>
+								<li class=item-4></li>
+								<li class=item-5></li>
+							</ul>
+						</code></pre>
+					</section>
+					<section data-background-iframe="http://docs.emmet.io/cheat-sheet/" data-background-interactive>
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<p>If you want to know more. Please click <a href="http://docs.emmet.io/cheat-sheet/">this</a>.</p>
+							<h2 class="fragment fade-up">Let's move on.</h2>
+						</div>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							.className {
+								pos:a+w100%+h5e+m10-15-10-15
+							}						
+						</code></pre>
+					</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							.className {
+								position: absolute;
+								width: 100%;
+								height: 5em;
+								margin: 10px 15px 10px 15px; 
+							}						
+						</code></pre>
+					</section>
+					<section>
+						<p>How often have you had to register all vendor prefixes?</p>
+						<p class="fragment">-</p>
+						<p class="fragment fade-up">@</p>
+					</section>
+				</section>
+				<section data-transition="slide" data-background="#e1cc4f" data-background-transition="zoom">
+					<section>
+						<h2>Chapter 2 - Preprocessor</h2>
+					</section>
+					<section>
+						<h2>Preprocessor for html:</h2>
+						<p><div class="fragment">haml</div> 
+							<div class="fragment">pug or jade</div> 
+							<div class="fragment">ejs</div> 
+							<div class="fragment">etc.</div>
+						</p>
+					</section>
+					<section>
+						<h2>Preprocessor for CSS:</h2>
+						<p><div class="fragment">Less</div> 
+							<div class="fragment">SASS or SCSS</div> 
+							<div class="fragment">PostCSS</div> 
+							<div class="fragment">etc.</div>
+						</p>
+					</section>
+					<section>
+						<h3>Nesting</h3>
+						<div>
+							<div data-id="box1" class="fragment">
+								<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+									.portfolio {
+										border: 1px solid #9799a7;
+										ul {
+											list-style: none;
+											li {
+												float: left;
+											}
+										}
+									}					
+								</code></pre>
+							</div>
+							<div data-id="box2" class="fragment">
+								<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+									div {
+										font:
+											family: Baskerville, Palatino, serif;
+											style: italic;
+									}					
+								</code></pre>
+							</div> 
+							<div data-id="box3" class="fragment">
+								<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+									container {
+										width: 960px;
+										@media screen and (max-width: 960px) {
+											width: 100%;
+										}
+									}					
+								</code></pre>
+							</div> 
+						</div>
+					</section>
+					<section>‘&’</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							.parent-className {
+								width: 100%;
+								height: 100%;
+								&__title {
+									margin-bottom: 5rem;
+								}
+								&__wrapper {
+									display: flex;
+								}
+							}
+						</code></pre>
+					</section>
+					<section>‘$’</section>
+					<section>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							$main-color: red
+						</code></pre>
+					</section>
+					<section data-background-iframe="https://sass-lang.com/documentation" data-background-interactive>
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<p>If you want to know more. Please click <a href="https://sass-lang.com/documentation">this</a>.</p>
+						</div>
+					</section>
+				</section>
+				<section data-transition="slide" data-background="#32cd32" data-background-transition="zoom">
+					<section>
+						<h2>Chapter 3 - AI</h2>
+						<h3>Artificial intelligence</h3>
+					</section>
+					<section>
+						<h2>Tabnine</h2>
+					</section>
+					<section data-background-video="./assets/js_video.a388a086b240bb67fb719731d26ebc53.webm">
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<p>If you want to know more. Please click <a href="https://www.tabnine.com/">this</a>.</p>
+							<h2 class="fragment fade-up">Let's move on.</h2>
+						</div>
+					</section>
+					<section>
+						<h2>Copilot</h2>
+					</section>
+					<section data-background-iframe="https://copilot.github.com/" data-background-interactive></section>
+				</section>
+				<section  data-transition="slide" data-background="#423189" data-background-transition="zoom">
+					<h2>Thank you for your time!</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		
+		</script>
+	</body>
+</html>
